@@ -1,0 +1,263 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #6e6efdba;
+  color: #000000;
+  margin: 0;
+  overflow: hidden;
+  transition: background-color 0.5s ease;
+  background: radial-gradient(circle, #ffd90003, #194efd00, #42424296, #000000);
+}
+
+.concentric-circles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    transparent,
+    transparent 60%,
+    rgba(255, 255, 255, 0.1) 61%
+  );
+  background-size: 100px 100px;
+  mask-image: radial-gradient(circle, white, transparent 70%);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.controls {
+  position: absolute;
+  top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.controls button {
+  padding: 10px 15px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+
+.button-front {
+  background-color: #ff1a1a;
+}
+.button-back {
+  background-color: #3663f6;
+}
+.button-left {
+  background-color: #ffeb3b;
+}
+.button-right {
+  background-color: #00e676;
+}
+.button-top {
+  background-color: #ff9800;
+}
+.button-bottom {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.cube {
+  width: 50vh;
+  height: 50vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(-45deg);
+  transition: transform 0.5s ease;
+  cursor: grab;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 3px solid #000;
+  text-align: center;
+}
+
+.front {
+  transform: translateZ(calc(50vh / 2));
+  background: #ff1a1a;
+}
+.back {
+  transform: rotateY(180deg) translateZ(calc(50vh / 2));
+  background: #3663f6;
+}
+.right {
+  transform: rotateY(90deg) translateZ(calc(50vh / 2));
+  background: #00e676;
+}
+.left {
+  transform: rotateY(-90deg) translateZ(calc(50vh / 2));
+  background: #ffeb3b;
+}
+.top {
+  transform: rotateX(90deg) translateZ(calc(50vh / 2));
+  background: #ff9800;
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(calc(50vh / 2));
+  background: #ffffff;
+}
+
+.home {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.profile-image {
+  width: 100%;
+  height: auto;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.skill-container {
+  width: 100%;
+}
+
+.skill-container h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.skill-container ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+.skill-container li {
+  margin-bottom: 5px;
+}
+
+.skill-container progress {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.article_about {
+  width: 100%;
+  max-height: 80%;
+  overflow-y: auto;
+  font-size: 1.5em; /* Größere Schrift für bessere Sichtbarkeit */
+  line-height: 1.4;
+}
+
+.article_about h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.article_about p {
+  margin-bottom: 10px;
+}
+
+.projekt h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.projekt h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.projekt video {
+  height: 200px;
+}
+.projekt img {
+  height: 200px;
+}
+.kontakt ul {
+  list-style: none;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.kontakt h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .controls button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+
+  .skill-container h3 {
+    font-size: 1.8em;
+  }
+
+  .skill-container ul {
+    font-size: 1.3em;
+  }
+
+  .article_about {
+    font-size: 1.3em;
+  }
+
+  .article_about h1 {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .controls {
+    flex-wrap: wrap;
+    max-width: 300px;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .controls button {
+    padding: 6px 10px;
+    font-size: 0.8em;
+  }
+
+  .skill-container h1 {
+    font-size: 1.5em;
+  }
+
+  .skill-container ul {
+    font-size: 0.8em;
+  }
+
+  .article_about {
+    font-size: 0.75em;
+  }
+
+  .article_about h1 {
+    font-size: 1.6em;
+    margin: 0;
+  }
+  .projekt h1 {
+    font-size: 1.5em;
+  }
+  .projekt h2 {
+    font-size: 1em;
+  }
+  .projekt img {
+    height: 150px;
+  }
+  .projekt video {
+    height: 150px;
+  }
+}

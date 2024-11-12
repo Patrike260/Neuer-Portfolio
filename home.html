@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Einfacher Würfel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="controls">
+    <button class="button-top" onclick="rotateCube('up')">Home</button>
+    <button class="button-front" onclick="rotateCube('front')">About</button>
+    <button class="button-left" onclick="rotateCube('left')">Arbeits Skills</button>
+    <button class="button-right" onclick="rotateCube('right')">Persönliche Skills</button>
+    <button class="button-back" onclick="rotateCube('back')">Projecte</button>
+    <button class="button-bottom" onclick="rotateCube('down')">Kontacte</button>
+  </div>
+
+  <div class="cube" id="cube">
+    <div class="face front">
+      <article id="article_about" class="article_about">
+        <h1>About</h2>
+        <p>Hallo,</p>
+        <p>
+          Ich bin Patrik Rossetti, lebe in Gossau und bin im Jahr 1995 geboren.
+          Seit ich 9 Jahre alt bin, fasziniert mich alles, was mit PCs zu tun hat.
+          Ich habe früh angefangen, eigene PCs zusammenzubauen (meistens aus
+          recycelten Teilen) und fand darin ein spannendes Hobby.
+        </p>
+        <p>
+          Für meine erste Lehre entschied ich mich, Hobby und Arbeit zu trennen,
+          und wählte eine Lehre als Polymechaniker. Nach meiner Lehre arbeitete
+          ich in einer Sicherheitsdruckerei als Quereinsteiger-Operator im
+          Druckbereich. Aber nach mehreren Jahren zog es mich wieder zurück an die
+          Fräsmaschine als Polymechaniker.
+        </p>
+        <p>
+          Aufgrund veränderter Lebensumstände habe ich mich entschlossen, mich
+          beruflich neu zu orientieren. Mit vollem Elan nehme ich diese
+          Gelegenheit wahr, um mich im Bereich Informatik mit Schwerpunkt
+          Applikationsentwicklung EFZ auszubilden. Die Arbeit mit digitalen
+          Technologien hat mich schon immer fasziniert und ich bin überzeugt, dass
+          ich in diesem Bereich meine Stärken und Interessen optimal einbringen
+          kann.
+        </p>
+            </article>
+    </div>
+    <div class="face back">
+      <article id="projekt" class="projekt">
+      <h1>Projekte</h1>
+        <h2>Spaceship</h2>
+        <img src="spaceship.png" alt="spaceship_game"/>
+        <h2>2D Topdown </h2>
+          <video controls>
+          <source src="2dTopDown.mp4" type="video/mp4" />
+        </video>
+      
+    </article>
+    </div>
+    <div class="face right">
+      <div class="skill-container">
+        <h1>Persönliche Skills</h1>
+        <ul>
+          <li>Lernbereit</li>
+          <progress max="100" value="100" class="progress"></progress>
+          <li>Schnelle Aufnahmefähigkeit</li>
+          <progress max="100" value="90" class="progress"></progress>
+          <li>Verantwortungsbewusstsein</li>
+          <progress max="100" value="90" class="progress"></progress>
+          <li>Selbständig</li>
+          <progress max="100" value="80" class="progress"></progress>
+          <li>Team-Player</li>
+          <progress max="100" value="85" class="progress"></progress>
+          <li>Kundenkontakt</li>
+          <progress max="100" value="80" class="progress"></progress>
+          <li>analytisches Denkvermögen</li>
+          <progress max="100" value="90" class="progress"></progress>
+        </ul>
+      </div>
+    </div>
+    <div class="face left">
+      <div class="skill-container">
+        <h1>Arbeits Skills</h1>
+        <ul>
+          <li>HTML, CSS</li>
+          <progress max="100" value="70" class="progress"></progress>
+          <li>SQL</li>
+          <progress max="100" value="60" class="progress"></progress>
+          <li>Java</li>
+          <progress max="100" value="50" class="progress"></progress>
+          <li>C#</li>
+          <progress max="100" value="40" class="progress"></progress>
+          <li>MS Power Plattform</li>
+          <progress max="100" value="40" class="progress"></progress>
+          <li>MS Office 365</li>
+          <progress max="100" value="80" class="progress"></progress>
+          <li>Windows</li>
+          <progress max="100" value="90" class="progress"></progress>
+          <li>Linux</li>
+          <progress max="100" value="40" class="progress"></progress>
+        </ul>
+      </div>
+    </div>
+    <div class="face top">
+      <h1 class="home">Patrik Rossetti</h1>
+      <img src="Bild1.jpg" alt="profilbild" class="profile-image">
+    </div>
+    <div class="face bottom">
+      <article id="kontakt" class="kontakt">
+      <h1>Kontakte</h1>
+        <h2>e-mail: <a href="Patrik.e260@gmail.com">Patrik.e260@gmail.com</a></h2>
+        <h2>Linkedin: <a href="https://www.linkedin.com/in/patrik-rossetti-351430309/">Link zum Profil</a> </h2>
+        <h2>Github: <a href="https://github.com/Patrike260?tab=repositories">Link zum Hub</a> </h2>
+      </article>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
